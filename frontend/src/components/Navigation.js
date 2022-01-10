@@ -11,7 +11,7 @@ function Navigation() {
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <NavLink to="/home"
+          <NavLink to="/"
            className={({ isActive }) => "nav-link" + (isActive ? " active-class" : "")}
            >Home</NavLink>
         </li>
@@ -79,9 +79,13 @@ const NavigationStyled = styled.nav`
       display: block;
       a{
         display: block;
-        padding: .1rem 0;
+        padding: .2rem 0;
         position: relative;
         z-index: 10;
+        text-transform: uppercase;
+        transition: all .4s ease-in-out;
+        font-weight: 400;
+        letter-spacing: 1px;
         &:hover{
           cursor: pointer;
         }

@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function HomePage() {
   return (
     <HomePageStyled>
-      <div className="p-particles-js">
+      <div className="particle-con">
         <Particle />
       </div>
       <div className="typography">
@@ -29,12 +29,6 @@ const HomePageStyled = styled.header`
   width: 100%;
   height: 100vh;
   position: relative;
-
-  .p-particles-js{
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 
   .typography{
     position: absolute;

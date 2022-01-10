@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 import Sidebar from './components/Sidebar'
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ResumePage from './pages/ResumePage';
+import PortfolioPage from './pages/PortfolioPage';
+import BlogPage from './pages/BlogPage';
+import ContactPage from './pages/ContactPage';
+import {Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
@@ -13,8 +19,14 @@ function App() {
           <div className="line-3"></div>
           <div className="line-4"></div>
         </div>
-
-        <HomePage />
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/about" element={<AboutPage />} />
+            <Route exact path="/resume" element={<ResumePage />} />
+            <Route exact path="/portfolio" element={<PortfolioPage />} />
+            <Route exact path="/blog" element={<BlogPage />} />
+            <Route exact path="/contact" element={<ContactPage />} />
+          </Routes>
       </MainContentStyled>
     </div>
   );
@@ -30,6 +42,8 @@ const MainContentStyled = styled.main`
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    opacity: 0.4;
+    z-index: -1;
 
     .line-1, .line-2, .line-3, .line-4{
       width: 1px;
