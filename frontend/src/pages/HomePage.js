@@ -30,6 +30,11 @@ const HomePageStyled = styled.header`
   height: 100vh;
   position: relative;
 
+  .particle-con{
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+  }
   .typography{
     position: absolute;
     top: 50%;
@@ -37,7 +42,9 @@ const HomePageStyled = styled.header`
     transform: translate(-50%, -50%);
     text-align: center;
     width: 80%;
-
+    p{
+      text-transform: capitalize;
+    }
     .icons{
       display: flex;
       justify-content: center;
